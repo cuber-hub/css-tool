@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Border Radius Generator | css-flash</title>
+  <meta name="description" content="CSS-Flash border radius generator to build rounded corner styles with per-corner controls, live preview, and copy-ready HTML/CSS code." />
+  <meta name="keywords" content="border radius generator, CSS border radius generator, rounded corners CSS, border-radius tool, CSS-Flash" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <section id="border-radius" class="tool-section active">
+      <div class="section-header">
+        <h1>Border Radius Generator</h1>
+        <p>Control each corner of an element independently with live shape preview.</p>
+      </div>
+      <div class="tool-layout">
+        <div class="controls-panel">
+          <div class="control-group"><label>Top-Left: <span id="brTLVal">20</span>px</label><input type="range" id="brTL" min="0" max="200" value="20" /></div>
+          <div class="control-group"><label>Top-Right: <span id="brTRVal">20</span>px</label><input type="range" id="brTR" min="0" max="200" value="20" /></div>
+          <div class="control-group"><label>Bottom-Right: <span id="brBRVal">20</span>px</label><input type="range" id="brBR" min="0" max="200" value="20" /></div>
+          <div class="control-group"><label>Bottom-Left: <span id="brBLVal">20</span>px</label><input type="range" id="brBL" min="0" max="200" value="20" /></div>
+          <div class="control-group"><label>Element Color</label><div class="color-row"><input type="color" id="brColor" value="#6c63ff" /></div></div>
+          <div class="preset-chips">
+            <span class="chip" data-br="0,0,0,0">Square</span>
+            <span class="chip" data-br="50,50,50,50">Circle</span>
+            <span class="chip" data-br="30,30,30,30">Rounded</span>
+            <span class="chip" data-br="100,0,100,0">Leaf</span>
+            <span class="chip" data-br="50,50,0,0">Top Round</span>
+          </div>
+          <div class="action-row">
+            <button class="btn-copy" id="copyBorderRadiusHtml">Copy HTML</button>
+            <button class="btn-copy" id="copyBorderRadiusCss">Copy CSS</button>
+            <button class="btn-reset" id="resetBorderRadius">Reset</button>
+          </div>
+        </div>
+        <div class="preview-panel">
+          <div class="preview-box"><div class="br-demo" id="borderRadiusPreview"></div></div>
+          <div class="code-block"><pre id="borderRadiusCode"></pre></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Code copied</div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
