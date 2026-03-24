@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flexbox Generator | css-flash</title>
+  <meta name="description" content="CSS-Flash flexbox generator tool to configure flex-direction, justify-content, align-items, wrap, and gap with live preview." />
+  <meta name="keywords" content="flexbox generator tool, CSS flexbox generator, flex layout generator, flexbox CSS tool, CSS-Flash" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <section id="flexbox" class="tool-section active">
+      <div class="section-header">
+        <h1>Flexbox Generator</h1>
+        <p>Configure CSS flexbox properties and see the layout render in real-time.</p>
+      </div>
+      <div class="tool-layout">
+        <div class="controls-panel">
+          <div class="control-group"><label>Flex Direction</label><select id="flexDirection"><option value="row">row</option><option value="row-reverse">row-reverse</option><option value="column">column</option><option value="column-reverse">column-reverse</option></select></div>
+          <div class="control-group"><label>Justify Content</label><select id="flexJustify"><option value="flex-start">flex-start</option><option value="flex-end">flex-end</option><option value="center">center</option><option value="space-between">space-between</option><option value="space-around">space-around</option><option value="space-evenly">space-evenly</option></select></div>
+          <div class="control-group"><label>Align Items</label><select id="flexAlign"><option value="stretch">stretch</option><option value="flex-start">flex-start</option><option value="flex-end">flex-end</option><option value="center">center</option><option value="baseline">baseline</option></select></div>
+          <div class="control-group"><label>Flex Wrap</label><select id="flexWrap"><option value="nowrap">nowrap</option><option value="wrap">wrap</option><option value="wrap-reverse">wrap-reverse</option></select></div>
+          <div class="control-group"><label>Gap: <span id="flexGapVal">10</span>px</label><input type="range" id="flexGap" min="0" max="40" value="10" /></div>
+          <div class="control-group"><label>Items count: <span id="flexCountVal">4</span></label><input type="range" id="flexCount" min="1" max="8" value="4" /></div>
+          <div class="action-row">
+            <button class="btn-copy" id="copyFlexHtml">Copy HTML</button>
+            <button class="btn-copy" id="copyFlexCss">Copy CSS</button>
+            <button class="btn-reset" id="resetFlex">Reset</button>
+          </div>
+        </div>
+        <div class="preview-panel">
+          <div class="preview-box flex-canvas"><div class="flex-demo" id="flexPreview"></div></div>
+          <div class="code-block"><pre id="flexCode"></pre></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Code copied</div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
