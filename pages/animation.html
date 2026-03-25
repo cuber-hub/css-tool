@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Animation Generator | css-flash</title>
+  <meta name="description" content="CSS-Flash animation generator to create keyframe animation CSS with duration, easing, and iteration controls." />
+  <meta name="keywords" content="CSS animation generator, keyframes generator, animation CSS tool, animate CSS code, CSS-Flash" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <section id="animation" class="tool-section active">
+      <div class="section-header"><h1>CSS Animation Generator</h1><p>Build CSS keyframe animations with easing, duration and live preview.</p></div>
+      <div class="tool-layout">
+        <div class="controls-panel">
+          <div class="control-group"><label>Animation Type</label><select id="animType"><option value="fade">Fade In</option><option value="slide-up">Slide Up</option><option value="slide-left">Slide Left</option><option value="bounce">Bounce</option><option value="rotate">Rotate</option><option value="scale">Scale</option><option value="shake">Shake</option></select></div>
+          <div class="control-group"><label>Duration: <span id="animDurVal">1</span>s</label><input type="range" id="animDuration" min="1" max="50" value="10" /></div>
+          <div class="control-group"><label>Easing</label><select id="animEasing"><option value="ease">ease</option><option value="ease-in">ease-in</option><option value="ease-out">ease-out</option><option value="ease-in-out">ease-in-out</option><option value="linear">linear</option><option value="cubic-bezier(0.68,-0.55,0.27,1.55)">Spring</option></select></div>
+          <div class="control-group"><label>Iteration</label><select id="animIteration"><option value="infinite">infinite</option><option value="1">1</option><option value="2">2</option><option value="3">3</option></select></div>
+          <div class="control-group"><label>Element Color</label><div class="color-row"><input type="color" id="animColor" value="#6c63ff" /></div></div>
+          <div class="action-row"><button class="btn-copy" id="copyAnimationHtml">Copy HTML</button><button class="btn-copy" id="copyAnimationCss">Copy CSS</button><button class="btn-copy" id="copyAnimationTw">Tailwind</button><button class="btn-reset" id="resetAnimation">Reset</button></div>
+        </div>
+        <div class="preview-panel"><div class="preview-box anim-canvas"><div class="anim-demo" id="animPreview"></div></div><div class="code-block"><pre id="animationCode"></pre></div></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Code copied</div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Buttons Library | CSS-Flash</title>
+  <meta name="description" content="A curated collection of modern, pre-built CSS and Tailwind CSS buttons for your next project." />
+  <meta name="keywords" content="CSS buttons, Tailwind buttons, free buttons, button library, modern UI buttons" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <section id="buttons-library" class="tool-section active">
+      <div class="section-header">
+        <h1>🏗️ Buttons Library</h1>
+        <p>A curated collection of modern, pre-built CSS and Tailwind CSS buttons for your next project. Click to copy the code.</p>
+      </div>
+      
+      <div class="gallery-grid" id="buttonsGallery">
+        <!-- Buttons will be injected here via JS -->
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast">✅ Code Copied!</div>
+
+  <!-- Include the data first, then the shared main logic, then the gallery logic -->
+  <script src="../js/buttons-data.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const gallery = document.getElementById('buttonsGallery');
+      if (!gallery) return;
+
+      // Create a style element for the button's custom CSS
+      const styleTag = document.createElement('style');
+      styleTag.id = 'prebuilt-buttons-styles';
+      document.head.appendChild(styleTag);
+
+      let allCss = '';
+
+      PREBUILT_BUTTONS.forEach((btn, index) => {
+        allCss += btn.css + '\n';
+
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+        card.innerHTML = `
+          <div class="card-preview" onclick="window.location.href='button-preview.html?id=${index}'" title="Click to view details">
+            ${btn.html}
+          </div>
+          <div class="card-info">
+            <div style="display:flex;justify-content:space-between;align-items:center;">
+              <h3>${btn.name}</h3>
+              <a href="button-preview.html?id=${index}" class="btn-mini-copy" style="flex:0 0 auto;min-width:auto;padding:4px 8px;" title="View in depth">Preview</a>
+            </div>
+            <div class="card-actions">
+              <button class="btn-mini-copy" onclick="copySnippet(${index}, 'html')" title="Copy HTML Snippet">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                HTML
+              </button>
+              <button class="btn-mini-copy" onclick="copySnippet(${index}, 'css')" title="Copy CSS Styles">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"></path></svg>
+                CSS
+              </button>
+              <button class="btn-mini-copy" onclick="copySnippet(${index}, 'tailwind')" title="Copy Tailwind Classes">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                TW
+              </button>
+            </div>
+          </div>
+        `;
+        gallery.appendChild(card);
+      });
+
+      styleTag.textContent = allCss;
+    });
+
+    function copySnippet(index, type) {
+      const btn = PREBUILT_BUTTONS[index];
+      let snippet = '';
+      if (type === 'html') snippet = btn.html;
+      else if (type === 'css') snippet = btn.css;
+      else if (type === 'tailwind') snippet = btn.tailwind;
+
+      if (snippet) {
+        // Use copyToClipboard from main.js (which should be globally available)
+        if (typeof copyToClipboard === 'function') {
+          copyToClipboard(snippet);
+        } else {
+          navigator.clipboard.writeText(snippet).then(() => {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+          });
+        }
+      }
+    }
+  </script>
+</body>
+</html>

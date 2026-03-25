@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About CSS-Flash | The Ultimate Free CSS Tool Connection</title>
+  <meta name="description" content="Learn about CSS-Flash, the all-in-one platform for modern CSS generators, pre-built button libraries, and developer utilities." />
+  <meta name="keywords" content="CSS generator about, CSS-Flash mission, free developer tools, CSS button library, dark mode CSS tool" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .about-hero {
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 40px 0;
+      background: linear-gradient(135deg, var(--bg-secondary), var(--bg-primary));
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border);
+    }
+    .about-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+      background: linear-gradient(to right, var(--text-primary), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-tag {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .about-section {
+      margin-bottom: 64px;
+    }
+    .about-section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--text-primary);
+    }
+    .about-section h2::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .about-content {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+    .about-content b {
+      color: var(--text-primary);
+    }
+    .feature-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+    .about-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--accent);
+    }
+    .about-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 12px;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .about-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+    .stats-row {
+      display: flex;
+      justify-content: space-around;
+      margin: 48px 0;
+      padding: 32px;
+      background: var(--bg-secondary);
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+    .stat-item h4 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin-bottom: 4px;
+    }
+    .stat-item p {
+       font-size: 0.9rem;
+       color: var(--text-muted);
+       text-transform: uppercase;
+       letter-spacing: 1px;
+    }
+    .checklist {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+    .checklist li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-secondary);
+    }
+    .checklist li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: bold;
+      background: rgba(34, 197, 94, 0.1);
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      font-size: 14px;
+    }
+    .cta-footer {
+      text-align: center;
+      padding: 64px 0;
+      border-top: 1px solid var(--border);
+    }
+    .btn-main-cta {
+      display: inline-block;
+      padding: 16px 32px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      box-shadow: 0 10px 20px var(--accent-glow);
+      transition: all 0.3s ease;
+    }
+    .btn-main-cta:hover {
+      background: var(--accent-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 15px 30px var(--accent-glow);
+    }
+  </style>
+</head>
+<body>
+
+  <main class="main-content">
+    <div class="about-container">
+      
+      <!-- Hero -->
+      <section class="about-hero">
+        <h1>🚀 About CSS-Flash</h1>
+        <p class="hero-tag">The ultimate free CSS tool collection designed to empower developers and designers worldwide.</p>
+      </section>
+
+      <!-- Mission -->
+      <section class="about-section">
+        <h2>🎨 Our Vision & Mission</h2>
+        <div class="about-content">
+          <p>
+            In today’s fast-paced web development world, speed and creativity matter more than ever. That’s why we built <b>CSS-Flash</b> — a powerful <b>all-in-one CSS tool platform</b> designed to make your workflow smoother, faster, and more efficient. And the best part? It’s completely <b>free</b>.
+          </p>
+          <p style="margin-top:16px;">
+            Our CSS tool isn’t just another generator — it’s a complete toolkit. With <b>10+ powerful tools</b> and a boutique library of 30+ buttons, you can handle everything from complex shadows to glassmorphism layouts without switching between multiple websites.
+          </p>
+        </div>
+        
+        <div class="stats-row">
+          <div class="stat-item">
+            <h4>10+</h4>
+            <p>Power Tools</p>
+          </div>
+          <div class="stat-item">
+            <h4>30+</h4>
+            <p>Buttons</p>
+          </div>
+          <div class="stat-item">
+            <h4>0</h4>
+            <p>Logins Required</p>
+          </div>
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>Privacy First</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Key Features -->
+      <section class="about-section">
+        <h2>🛠 Everything You Need</h2>
+        <div class="about-content">
+          <p>Whether you're a beginner learning CSS or a pro building modern interfaces, this platform helps you save time and focus on what really matters — creating beautiful designs.</p>
+        </div>
+        <div class="feature-list">
+          <div class="about-card">
+            <h3>🔘 Ready-to-Use Library</h3>
+            <p>No need to write CSS from scratch. Browse through beautifully designed modern, 3D, and neon buttons. Click to copy and paste directly into your project.</p>
+          </div>
+          <div class="about-card">
+            <h3>⚡ Performance First</h3>
+            <p>Built with vanilla JavaScript and zero external dependencies. CSS-Flash is lightweight, handles high traffic effortlessly, and loads in milliseconds.</p>
+          </div>
+          <div class="about-card">
+            <h3>🌗 Dual Theme Support</h3>
+            <p>Switch between 🌙 Dark Mode for comfortable late-night coding and ☀️ Light Mode for a crisp, high-contrast workspace.</p>
+          </div>
+          <div class="about-card">
+            <h3>🔒 No Tracking</h3>
+            <p>Your data stays with you. All code generation happens locally in your browser. No accounts, no newsletters, no cookies — just pure productivity.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Philosophy -->
+      <section class="about-section" style="background: var(--bg-card); padding: 40px; border-radius: var(--radius-lg); border: 1px solid var(--border);">
+        <h2 style="border:none;">💡 Why Choose CSS-Flash?</h2>
+        <div class="about-content">
+          <p>We designed this platform with one single goal: <b>to remove complexity</b>. Every tool is built with a clean interface, instant live previews, and robust copy-paste functionality for HTML, CSS, and Tailwind CSS.</p>
+          
+          <ul class="checklist">
+            <li>100% Free Forever</li>
+            <li>Tailwind CSS Support</li>
+            <li>Ready-to-use Button Library</li>
+            <li>Beginner Friendly</li>
+            <li>Saves Time & Effort</li>
+            <li>Clean, Pro Interface</li>
+            <li>Live Interaction Previews</li>
+            <li>Mobile Responsive</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Call to Action -->
+      <footer class="cta-footer">
+        <h2>🚀 Ready to Build Smarter?</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 32px;">Stop wasting time searching for tools across the internet. Everything you need is already here.</p>
+        <a href="../index.html" class="btn-main-cta">Explore the Dashboard</a>
+        <p style="margin-top:24px; font-style: italic; color: var(--text-muted);">Design faster. Build smarter. Create better.</p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

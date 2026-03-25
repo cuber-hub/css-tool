@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Generator | css-flash</title>
+  <meta name="description" content="CSS-Flash CSS grid generator to create responsive grid layouts with rows, columns, and gap controls plus live preview." />
+  <meta name="keywords" content="CSS grid generator, grid generator CSS, CSS layout generator, grid template generator, CSS-Flash" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <section id="grid" class="tool-section active">
+      <div class="section-header">
+        <h1>CSS Grid Generator</h1>
+        <p>Design grid layouts by setting columns, rows and gap with live preview.</p>
+      </div>
+      <div class="tool-layout">
+        <div class="controls-panel">
+          <div class="control-group"><label>Columns: <span id="gridColsVal">3</span></label><input type="range" id="gridCols" min="1" max="6" value="3" /></div>
+          <div class="control-group"><label>Rows: <span id="gridRowsVal">3</span></label><input type="range" id="gridRows" min="1" max="6" value="3" /></div>
+          <div class="control-group"><label>Gap: <span id="gridGapVal">12</span>px</label><input type="range" id="gridGap" min="0" max="40" value="12" /></div>
+          <div class="control-group"><label>Column Template</label><select id="gridColTemplate"><option value="repeat({n}, 1fr)">Equal (1fr)</option><option value="repeat({n}, auto)">Auto</option><option value="repeat({n}, minmax(100px,1fr))">minmax</option></select></div>
+          <div class="action-row">
+            <button class="btn-copy" id="copyGridHtml">Copy HTML</button>
+            <button class="btn-copy" id="copyGridCss">Copy CSS</button>
+            <button class="btn-copy" id="copyGridTw">Tailwind</button>
+            <button class="btn-reset" id="resetGrid">Reset</button>
+          </div>
+        </div>
+        <div class="preview-panel">
+          <div class="preview-box grid-canvas"><div class="grid-demo" id="gridPreview"></div></div>
+          <div class="code-block"><pre id="gridCode"></pre></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Code copied</div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clip-path Generator | css-flash</title>
+  <meta name="description" content="CSS-Flash clip-path generator to create polygon and preset clip-path shapes with live preview and copy-ready CSS." />
+  <meta name="keywords" content="clip-path generator, CSS clip-path generator, polygon CSS tool, clip path CSS, CSS-Flash" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <section id="clip-path" class="tool-section active">
+      <div class="section-header"><h1>✂️ Clip-path Generator</h1><p>Choose a preset shape or build a custom polygon with live preview.</p></div>
+      <div class="tool-layout">
+        <div class="controls-panel">
+          <div class="control-group">
+            <label>Preset Shapes</label>
+            <div class="preset-chips">
+              <span class="chip" data-clip="polygon(50% 0%, 0% 100%, 100% 100%)">Triangle</span>
+              <span class="chip" data-clip="polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%)">Pentagon</span>
+              <span class="chip" data-clip="polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)">Star</span>
+              <span class="chip" data-clip="polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%)">Hexagon</span>
+              <span class="chip" data-clip="polygon(0% 0%, 100% 0%, 100% 75%, 75% 100%, 0% 100%)">Arrow</span>
+              <span class="chip" data-clip="circle(50% at 50% 50%)">Circle</span>
+              <span class="chip" data-clip="ellipse(50% 30% at 50% 50%)">Ellipse</span>
+              <span class="chip" data-clip="inset(10% 10% 10% 10% round 20px)">Inset</span>
+            </div>
+          </div>
+          <div class="control-group"><label>Element Color</label><div class="color-row"><input type="color" id="clipColor" value="#6c63ff" /></div></div>
+          <div class="action-row"><button class="btn-copy" id="copyClipHtml">Copy HTML</button><button class="btn-copy" id="copyClipCss">Copy CSS</button><button class="btn-copy" id="copyClipTw">Tailwind</button><button class="btn-reset" id="resetClip">Reset</button></div>
+        </div>
+        <div class="preview-panel"><div class="preview-box clip-canvas"><div class="clip-demo" id="clipPreview"></div></div><div class="code-block"><pre id="clipCode"></pre></div></div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Code copied</div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

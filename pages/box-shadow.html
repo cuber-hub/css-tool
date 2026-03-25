@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Box Shadow Generator | css-flash</title>
+  <meta name="description" content="CSS-Flash box shadow generator CSS tool to create custom box-shadow styles with live preview and copy-ready HTML/CSS code." />
+  <meta name="keywords" content="box shadow generator CSS, CSS box shadow generator, box-shadow tool, shadow CSS generator, CSS-Flash" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <main class="main-content">
+    <section id="box-shadow" class="tool-section active">
+      <div class="section-header">
+        <h1>Box Shadow Generator</h1>
+        <p>Design CSS box-shadow with offset, blur, spread and color controls.</p>
+      </div>
+      <div class="tool-layout">
+        <div class="controls-panel">
+          <div class="control-group"><label>Horizontal Offset: <span id="shadowXVal">10</span>px</label><input type="range" id="shadowX" min="-60" max="60" value="10" /></div>
+          <div class="control-group"><label>Vertical Offset: <span id="shadowYVal">10</span>px</label><input type="range" id="shadowY" min="-60" max="60" value="10" /></div>
+          <div class="control-group"><label>Blur Radius: <span id="shadowBlurVal">20</span>px</label><input type="range" id="shadowBlur" min="0" max="100" value="20" /></div>
+          <div class="control-group"><label>Spread Radius: <span id="shadowSpreadVal">0</span>px</label><input type="range" id="shadowSpread" min="-30" max="60" value="0" /></div>
+          <div class="control-group"><label>Shadow Color</label><div class="color-row"><input type="color" id="shadowColor" value="#000000" /><input type="text" id="shadowColorHex" value="#000000" class="hex-input" /></div></div>
+          <div class="control-group"><label>Opacity: <span id="shadowOpacityVal">0.3</span></label><input type="range" id="shadowOpacity" min="0" max="100" value="30" /></div>
+          <div class="control-group"><label class="checkbox-label"><input type="checkbox" id="shadowInset" />Inset Shadow</label></div>
+          <div class="action-row">
+            <button class="btn-copy" id="copyShadowHtml">Copy HTML</button>
+            <button class="btn-copy" id="copyShadowCss">Copy CSS</button>
+            <button class="btn-copy" id="copyShadowTw">Tailwind</button>
+            <button class="btn-reset" id="resetShadow">Reset</button>
+          </div>
+        </div>
+        <div class="preview-panel">
+          <div class="preview-box shadow-canvas"><div class="shadow-demo" id="shadowPreview">Box</div></div>
+          <div class="code-block"><pre id="shadowCode"></pre></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div class="toast" id="toast">Code copied</div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
